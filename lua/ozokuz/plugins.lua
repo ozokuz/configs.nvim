@@ -10,31 +10,19 @@ end
 return require('packer').startup(function(use)
   -- Manage itself
   use 'wbthomason/packer.nvim'
-
   -- Colorscheme
-  use {
-    'folke/tokyonight.nvim',
-    config = function() vim.cmd([[colorscheme tokyonight]]) end
-  }
-
+  use 'folke/tokyonight.nvim'
   -- Tmux Integration
-  use {
-    'alexghergh/nvim-tmux-navigation',
-    config = function() require('ozokuz.tmux') end
-  }
-
+  use 'alexghergh/nvim-tmux-navigation'
   -- Statusline
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    config = function() require('lualine').setup() end
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-
   -- LSP
   use {
     'neovim/nvim-lspconfig'
   }
-
   -- Completion
   use {
     'hrsh7th/nvim-cmp',
@@ -46,8 +34,7 @@ return require('packer').startup(function(use)
       'hrsh7th/cmp-cmdline',
       'L3MON4D3/LuaSnip',
       'saadparwaiz1/cmp_luasnip'
-    },
-    config = function() require('ozokuz.completion') end
+    }
   }
 
   -- If packer was just installed then sync plugins
