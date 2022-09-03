@@ -1,5 +1,13 @@
 require('bufferline').setup {
   options = {
-    mode = "tabs"
+    mode = "tabs",
+    offsets = {
+      {
+        filetype = "NvimTree",
+        text = "File Explorer",
+        highlight = "Directory",
+        separator = true
+      }
+    }
   }
 }
