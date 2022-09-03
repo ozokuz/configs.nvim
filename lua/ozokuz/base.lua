@@ -7,6 +7,15 @@ o.encoding = 'utf-8'
 o.fileencoding = 'utf-8'
 
 vim.wo.number = true
+vim.wo.relativenumber = true
+
+local nvim080 = vim.fn.has("nvim-0.8.0")
+
+if (nvim080 == 1) then
+  o.cmdheight = 0
+else
+  o.cmdheight = 1
+end
 
 o.title = true
 o.autoindent = true
@@ -14,7 +23,6 @@ o.hlsearch = true
 o.backup = false
 o.swapfile = false
 o.showcmd = true
-o.cmdheight = 1
 o.laststatus = 2
 o.expandtab = true
 o.scrolloff = 10
