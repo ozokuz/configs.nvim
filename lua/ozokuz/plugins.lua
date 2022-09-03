@@ -24,6 +24,8 @@ return require('packer').startup(function(use)
   use { 'akinsho/bufferline.nvim', tag = "v2.*" }
   -- File Tree
   use 'kyazdani42/nvim-tree.lua'
+  -- Floating Terminal
+  use 'voldikss/vim-floaterm'
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
