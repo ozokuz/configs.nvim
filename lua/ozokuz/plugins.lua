@@ -26,6 +26,8 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-tree.lua'
   -- Floating Terminal
   use 'voldikss/vim-floaterm'
+  -- Show keybinds
+  use 'folke/which-key.nvim'
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
