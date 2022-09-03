@@ -4,18 +4,18 @@ local k = vim.keymap
 vim.g.mapleader = ' '
 
 -- No x yank
-k.set('n', 'x', '"_x')
+k.set('n', 'x', '"_x', {})
 
 -- Stay in visual when indenting
-k.set('v', '<', '<gv')
-k.set('v', '>', '>gv')
+k.set('v', '<', '<gv', {})
+k.set('v', '>', '>gv', {})
 
 -- Increment & Decrement
-k.set('n', '+', '<C-a>')
-k.set('n', '-', '<C-x>')
+k.set('n', '+', '<C-a>', {})
+k.set('n', '-', '<C-x>', {})
 
 -- Select all
-k.set('n', '<C-a>', 'gg<S-v>G')
+k.set('n', '<C-a>', 'gg<S-v>G', {})
 
 local function keymap(keys, func, desc)
   vim.keymap.set('n', keys, func, { noremap = true, silent = true, desc = desc })
