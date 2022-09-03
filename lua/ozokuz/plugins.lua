@@ -55,6 +55,8 @@ return require('packer').startup(function(use)
       'onsails/lspkind.nvim'
     }
   }
+  -- Commenting
+  use 'numToStr/Comment.nvim'
   -- Colorizing
   use 'norcalli/nvim-colorizer.lua'
   use 'mrshmllow/document-color.nvim'
