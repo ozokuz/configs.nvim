@@ -17,10 +17,21 @@ k.set('n', '-', '<C-x>')
 -- Select all
 k.set('n', '<C-a>', 'gg<S-v>G')
 
+local function keymap(keys, func, desc)
+  vim.keymap.set('n', keys, func, { noremap = true, silent = true, desc = desc })
+end
+
 -- New tab
-k.set('n', '<leader>te', ':tabedit<Return>')
+keymap('<leader>te', '<cmd>tabedit<CR>', '[T]ab: [E]dit')
 
 -- Split Window
-k.set('n', '<leader>ws', ':split<Return><C-w>w')
-k.set('n', '<leader>wv', ':vsplit<Return><C-w>w')
+keymap('<leader>ws', '<cmd>split<CR><C-w>w', '[W]indow: [S]plit Horizontal')
+keymap('<leader>wv', '<cmd>vsplit<CR><C-w>w', '[W]indow: Split [V]ertical')
+keymap('<leader>ww', '<cmd>w<CR>', '[W]indow: Save')
+keymap('<leader>wq', '<cmd>wq<CR>', '[W]indow: Save & Close')
+keymap('<leader>wd', '<cmd>q!<CR>', '[W]indow: Destroy')
+
+-- Quit
+keymap('<leader>qq', '<cmd>qa!<CR>', '[Q]uit: All Without Saving')
+keymap('<leader>qw', '<cmd>wall<CR><cmd>qall<CR>', '[Q]uit: Save All')
 
