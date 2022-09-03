@@ -17,5 +17,6 @@ require('lualine').setup {
     lualine_x = {},
     lualine_y = {},
     lualine_z = {}
-  }
+  },
+  extensions = { 'nvim-tree' }
 }

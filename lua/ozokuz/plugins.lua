@@ -22,6 +22,8 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   -- Tabline
   use { 'akinsho/bufferline.nvim', tag = "v2.*" }
+  -- File Tree
+  use 'kyazdani42/nvim-tree.lua'
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
