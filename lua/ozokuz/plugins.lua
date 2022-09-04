@@ -33,7 +33,9 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     requires = {
+      'p00f/nvim-ts-rainbow',
       'nvim-treesitter/nvim-treesitter-context',
+      'nvim-treesitter/nvim-treesitter-textobjects'
     }
   }
   -- LSP

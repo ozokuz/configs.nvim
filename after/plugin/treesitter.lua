@@ -10,6 +10,24 @@ require('nvim-treesitter.configs').setup {
       scope_incremental = '<c-s>',
       node_decremental = '<c-backspace>'
     }
+  },
+  textobjects = {
+    select = {
+      enable = true,
+      lookahead = true,
+      keymaps = {
+        ['af'] = '@function.outer',
+        ['if'] = '@function.inner',
+        ['ac'] = '@class.outer',
+        ['ic'] = '@class.inner'
+      }
+    }
+    -- TODO: enable move & swap keybinds from
+    -- github.com/nvim-lua/kickstart.nvim/blob/master/init.lua
+  },
+  rainbow = {
+    enable = true,
+    extended_mode = true
   }
 }
 
@@ -24,3 +42,4 @@ vim.api.nvim_create_autocmd({'BufEnter','BufAdd','BufNew','BufNewFile','BufWinEn
 })
 
 require('treesitter-context').setup()
+
