@@ -9,12 +9,23 @@ o.fileencoding = 'utf-8'
 vim.wo.number = true
 vim.wo.relativenumber = true
 
-local nvim080 = vim.fn.has("nvim-0.8.0")
+local has = function(x)
+  return vim.fn.has(x) == 1
+end
 
-if (nvim080 == 1) then
+local nvim080 = has("nvim-0.8.0")
+local is_win = has("win32")
+
+if nvim080 then
   o.cmdheight = 0
 else
   o.cmdheight = 1
+end
+
+if is_win then
+  o.shell = 'pwsh.exe'
+else
+  o.shell = 'fish'
 end
 
 o.title = true
@@ -26,7 +37,6 @@ o.showcmd = true
 o.laststatus = 2
 o.expandtab = true
 o.scrolloff = 10
-o.shell = 'fish'
 o.inccommand = 'split'
 o.ignorecase = true
 o.smarttab = true
