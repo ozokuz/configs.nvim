@@ -15,3 +15,4 @@ vim.api.nvim_create_autocmd({'BufEnter','BufAdd','BufNew','BufNewFile','BufWinEn
   end
 })
 
+require('treesitter-context').setup()
