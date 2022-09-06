@@ -34,6 +34,7 @@ o.laststatus = 2
 o.scrolloff = 10
 o.inccommand = 'split'
 o.ignorecase = true
+o.smartcase = true
 o.breakindent = true
 o.wrap = false
 o.backspace = 'start,eol,indent'
@@ -51,4 +52,14 @@ o.clipboard:append { 'unnamedplus' }
 vim.api.nvim_create_autocmd('InsertLeave', {
   pattern = '*',
   command = 'set nopaste',
+})
+
+local highlight_group =
+  vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
 })
