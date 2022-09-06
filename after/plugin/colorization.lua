@@ -3,9 +3,11 @@ require('document-color').setup {
 }
 
 require('colorizer').setup {
-  '*',
-  '!css',
-  '!html',
-  '!tsx',
-  '!dart',
+  filetypes = {
+    '*',
+    '!css',
+    '!html',
+    '!tsx',
+    '!dart',
+  },
 }

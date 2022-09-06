@@ -90,7 +90,7 @@ return require('packer').startup(function(use)
   -- Doc Strings
   use 'danymat/neogen'
   -- Colorizing
-  use 'norcalli/nvim-colorizer.lua'
+  use 'NvChad/nvim-colorizer.lua'
   use 'mrshmllow/document-color.nvim'
   -- Git Signs
   use 'lewis6991/gitsigns.nvim'
