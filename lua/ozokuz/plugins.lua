@@ -60,6 +60,7 @@ return require('packer').startup(function(use)
     branch = 'main',
     requires = {
       'lewis6991/hover.nvim',
+      'stevearc/aerial.nvim',
       'j-hui/fidget.nvim',
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',

@@ -5,20 +5,11 @@ require('lualine').setup {
     globalstatus = true,
   },
   winbar = U.is_nvim_080() and {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = { 'filename' },
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = {},
+    lualine_a = { 'filename' },
+    lualine_b = { 'aerial' },
   } or nil,
   inactive_winbar = U.is_nvim_080() and {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = { 'filename' },
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = {},
+    lualine_a = { 'filename' },
   } or nil,
   extensions = { 'nvim-tree' },
 }

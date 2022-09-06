@@ -41,12 +41,14 @@ local on_attach = function(client, bufnr)
   )
   nmap('<space>lc', '<cmd>Lspsaga code_action<CR>', '[C]ode Action')
   nmap('<space>lr', '<cmd>Lspsaga rename<CR>', '[R]ename')
-  nmap('<space>lo', '<cmd>LSoutlineToggle<CR>', '[O]utline')
 
   -- Setup Document Color Support
   if client.server_capabilities.colorProvider then
     require('document-color').buf_attach(bufnr)
   end
+
+  -- Setup Document Outline Support
+  require('aerial').on_attach(client, bufnr)
 
   -- Setup Formatting Support
   if client.supports_method 'textDocument/formatting' then
@@ -73,6 +75,18 @@ require('mason-lspconfig').setup()
 
 -- LSP Status Indicator
 require('fidget').setup()
+
+-- LSP Document Outline
+require('aerial').setup {
+  on_attach = function(bufnr)
+    vim.keymap.set(
+      'n',
+      '<space>lo',
+      '<cmd>AerialToggle!<CR>',
+      { buffer = bufnr, desc = '[O]utline' }
+    )
+  end,
+}
 
 -- LSP Hover UI
 require('hover').setup {
