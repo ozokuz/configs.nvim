@@ -92,6 +92,8 @@ return require('packer').startup(function(use)
   -- Colorizing
   use 'norcalli/nvim-colorizer.lua'
   use 'mrshmllow/document-color.nvim'
+  -- Git Signs
+  use 'lewis6991/gitsigns.nvim'
 
   -- If packer was just installed then sync plugins
   if packer_bootstrap then
