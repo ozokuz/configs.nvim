@@ -15,6 +15,7 @@ if U.is_nvim_080() then
   o.cmdheight = 0
 else
   o.cmdheight = 1
+  o.mouse = 'a'
 end
 
 if U.is_win() then
