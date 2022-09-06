@@ -94,6 +94,8 @@ return require('packer').startup(function(use)
   use 'mrshmllow/document-color.nvim'
   -- Git Signs
   use 'lewis6991/gitsigns.nvim'
+  -- Blank line indents
+  use 'lukas-reineke/indent-blankline.nvim'
 
   -- If packer was just installed then sync plugins
   if packer_bootstrap then
