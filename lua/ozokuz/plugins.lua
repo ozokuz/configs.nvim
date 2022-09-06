@@ -69,6 +69,8 @@ return require('packer').startup(function(use)
   -- Commenting
   use 'numToStr/Comment.nvim'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+  -- Doc Strings
+  use 'danymat/neogen'
   -- Colorizing
   use 'norcalli/nvim-colorizer.lua'
   use 'mrshmllow/document-color.nvim'
