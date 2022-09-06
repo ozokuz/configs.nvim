@@ -1,4 +1,4 @@
-local wk = require('which-key')
+local wk = require 'which-key'
 wk.setup()
 wk.register({
   f = { name = 'Files' },
@@ -6,6 +6,5 @@ wk.register({
   w = { name = 'Windows' },
   q = { name = 'Quit' },
   l = { name = 'LSP' },
-  t = { name = 'Tabs' }
+  t = { name = 'Tabs' },
 }, { prefix = '<leader>' })
-

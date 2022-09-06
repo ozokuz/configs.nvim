@@ -2,24 +2,24 @@ local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 local lspkind = require 'lspkind'
 
-cmp.setup({
+cmp.setup {
   formatting = {
-    format = lspkind.cmp_format()
+    format = lspkind.cmp_format(),
   },
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
-    end
+    end,
   },
-  mapping = cmp.mapping.preset.insert({
+  mapping = cmp.mapping.preset.insert {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({
+    ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
-      select = true
-    }),
+      select = true,
+    },
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -37,36 +37,36 @@ cmp.setup({
       else
         fallback()
       end
-    end, { 'i', 's' })
-  }),
+    end, { 'i', 's' }),
+  },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'luasnip' }
+    { name = 'luasnip' },
   }, {
-    { name = 'buffer' }
-  })
-})
+    { name = 'buffer' },
+  }),
+}
 
 cmp.setup.filetype('markdown', {
   sources = cmp.config.sources({
-    { name = 'emoji' }
+    { name = 'emoji' },
   }, {
-    { name = 'buffer' }
-  })
+    { name = 'buffer' },
+  }),
 })
 
 cmp.setup.cmdline('/', {
   mapping = cmp.mapping.preset.cmdline(),
   sources = {
-    { name = 'buffer' }
-  }
+    { name = 'buffer' },
+  },
 })
 
 cmp.setup.cmdline(':', {
   mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
-    { name = 'path' }
+    { name = 'path' },
   }, {
-    { name = 'cmdline' }
-  })
+    { name = 'cmdline' },
+  }),
 })

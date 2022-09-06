@@ -1,4 +1,3 @@
-require('ozokuz.base')
-require('ozokuz.keymap')
-require('ozokuz.plugins')
-
+require 'ozokuz.base'
+require 'ozokuz.keymap'
+require 'ozokuz.plugins'

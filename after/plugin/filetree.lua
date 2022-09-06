@@ -1,25 +1,29 @@
 require('nvim-tree').setup {
   renderer = {
-    highlight_git = true
+    highlight_git = true,
   },
   filters = {
-    custom = { '^.git$' }
+    custom = { '^.git$' },
   },
   view = {
     mappings = {
       list = {
         { key = 'h', action = 'close_node' },
         { key = 'l', action = 'edit' },
-        { key = '+', action = 'cd' }
-      }
-    }
+        { key = '+', action = 'cd' },
+      },
+    },
   },
   actions = {
     open_file = {
-      quit_on_open = true
-    }
-  }
+      quit_on_open = true,
+    },
+  },
 }
 
-vim.keymap.set('n', '<leader>ff', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true, desc = '[F]iles: Open [F]ile Tree' })
-
+vim.keymap.set(
+  'n',
+  '<leader>ff',
+  '<cmd>NvimTreeToggle<CR>',
+  { noremap = true, silent = true, desc = '[F]iles: Open [F]ile Tree' }
+)

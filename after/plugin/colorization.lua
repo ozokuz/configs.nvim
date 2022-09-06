@@ -1,12 +1,11 @@
 require('document-color').setup {
-  mode = 'background'
+  mode = 'background',
 }
 
-require('colorizer').setup({
-  '*';
-  '!css';
-  '!html';
-  '!tsx';
-  '!dart';
-})
-
+require('colorizer').setup {
+  '*',
+  '!css',
+  '!html',
+  '!tsx',
+  '!dart',
+}

@@ -1,8 +1,15 @@
 -- Setup Packer if not installed
 local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  packer_bootstrap = fn.system {
+    'git',
+    'clone',
+    '--depth',
+    '1',
+    'https://github.com/wbthomason/packer.nvim',
+    install_path,
+  }
   vim.cmd [[packadd packer.nvim]]
 end
 
@@ -21,7 +28,7 @@ return require('packer').startup(function(use)
   -- Statusline
   use 'nvim-lualine/lualine.nvim'
   -- Tabline
-  use { 'akinsho/bufferline.nvim', tag = "v2.*" }
+  use { 'akinsho/bufferline.nvim', tag = 'v2.*' }
   -- File Tree
   use 'kyazdani42/nvim-tree.lua'
   -- Floating Terminal
@@ -31,12 +38,14 @@ return require('packer').startup(function(use)
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    run = function()
+      require('nvim-treesitter.install').update { with_sync = true }
+    end,
     requires = {
       'p00f/nvim-ts-rainbow',
       'nvim-treesitter/nvim-treesitter-context',
-      'nvim-treesitter/nvim-treesitter-textobjects'
-    }
+      'nvim-treesitter/nvim-treesitter-textobjects',
+    },
   }
   -- LSP
   use {
@@ -47,11 +56,11 @@ return require('packer').startup(function(use)
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
       'jose-elias-alvarez/null-ls.nvim',
-      'neovim/nvim-lspconfig'
-    }
+      'neovim/nvim-lspconfig',
+    },
   }
   -- Language specific plugins
-  use "folke/lua-dev.nvim"
+  use 'folke/lua-dev.nvim'
   -- Completion
   use {
     'hrsh7th/nvim-cmp',
@@ -63,8 +72,8 @@ return require('packer').startup(function(use)
       'hrsh7th/cmp-cmdline',
       'L3MON4D3/LuaSnip',
       'saadparwaiz1/cmp_luasnip',
-      'onsails/lspkind.nvim'
-    }
+      'onsails/lspkind.nvim',
+    },
   }
   -- Commenting
   use 'numToStr/Comment.nvim'
@@ -80,4 +89,3 @@ return require('packer').startup(function(use)
     require('packer').sync()
   end
 end)
-

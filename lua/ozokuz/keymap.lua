@@ -18,7 +18,12 @@ k.set('n', '-', '<C-x>', {})
 k.set('n', '<C-a>', 'gg<S-v>G', {})
 
 local function keymap(keys, func, desc)
-  vim.keymap.set('n', keys, func, { noremap = true, silent = true, desc = desc })
+  vim.keymap.set(
+    'n',
+    keys,
+    func,
+    { noremap = true, silent = true, desc = desc }
+  )
 end
 
 -- New tab
@@ -34,4 +39,3 @@ keymap('<leader>wd', '<cmd>q!<CR>', '[W]indow: Destroy')
 -- Quit
 keymap('<leader>qq', '<cmd>qa!<CR>', '[Q]uit: All Without Saving')
 keymap('<leader>qw', '<cmd>wall<CR><cmd>qall<CR>', '[Q]uit: Save All')
-

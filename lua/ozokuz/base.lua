@@ -1,6 +1,6 @@
 local o = vim.opt
 
-vim.cmd('autocmd!')
+vim.cmd 'autocmd!'
 
 vim.scriptencoding = 'utf-8'
 o.encoding = 'utf-8'
@@ -13,8 +13,8 @@ local has = function(x)
   return vim.fn.has(x) == 1
 end
 
-local nvim080 = has("nvim-0.8.0")
-local is_win = has("win32")
+local nvim080 = has 'nvim-0.8.0'
+local is_win = has 'win32'
 
 if nvim080 then
   o.cmdheight = 0
@@ -58,8 +58,7 @@ o.pumblend = 5
 o.background = 'dark'
 o.clipboard:append { 'unnamedplus' }
 
-vim.api.nvim_create_autocmd("InsertLeave", {
+vim.api.nvim_create_autocmd('InsertLeave', {
   pattern = '*',
-  command = "set nopaste"
+  command = 'set nopaste',
 })
-
