@@ -101,6 +101,7 @@ require('mason-lspconfig').setup_handlers {
   end,
 }
 
+-- Setup Linters & Formatters
 local null_ls = require 'null-ls'
 
 null_ls.setup {
