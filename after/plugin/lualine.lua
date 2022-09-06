@@ -1,10 +1,10 @@
-local nvim080 = vim.fn.has 'nvim-0.8.0' == 1
+local U = require 'ozokuz.utils'
 
 require('lualine').setup {
   options = {
     globalstatus = true,
   },
-  winbar = nvim080 and {
+  winbar = U.is_nvim_080() and {
     lualine_a = {},
     lualine_b = {},
     lualine_c = { 'filename' },
@@ -12,7 +12,7 @@ require('lualine').setup {
     lualine_y = {},
     lualine_z = {},
   } or nil,
-  inactive_winbar = nvim080 and {
+  inactive_winbar = U.is_nvim_080() and {
     lualine_a = {},
     lualine_b = {},
     lualine_c = { 'filename' },

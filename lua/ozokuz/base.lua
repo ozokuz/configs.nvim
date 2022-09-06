@@ -1,3 +1,5 @@
+local U = require 'ozokuz.utils'
+
 local o = vim.opt
 
 vim.cmd 'autocmd!'
@@ -9,20 +11,13 @@ o.fileencoding = 'utf-8'
 vim.wo.number = true
 vim.wo.relativenumber = true
 
-local has = function(x)
-  return vim.fn.has(x) == 1
-end
-
-local nvim080 = has 'nvim-0.8.0'
-local is_win = has 'win32'
-
-if nvim080 then
+if U.is_nvim_080() then
   o.cmdheight = 0
 else
   o.cmdheight = 1
 end
 
-if is_win then
+if U.is_win() then
   o.shell = 'pwsh.exe'
 else
   o.shell = 'fish'
