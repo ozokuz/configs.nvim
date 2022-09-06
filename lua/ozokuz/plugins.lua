@@ -59,6 +59,7 @@ return require('packer').startup(function(use)
     'glepnir/lspsaga.nvim',
     branch = 'main',
     requires = {
+      'lewis6991/hover.nvim',
       'j-hui/fidget.nvim',
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',

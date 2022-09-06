@@ -1,3 +1,5 @@
+local U = require 'ozokuz.utils'
+
 -- Setup Capabilities
 local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
@@ -31,7 +33,6 @@ local on_attach = function(client, bufnr)
   nmap('gr', '<cmd>Lspsaga lsp_finder<CR>', '[G]oto [R]eferences')
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
   nmap('gT', vim.lsp.buf.type_definition, '[G]oto [T]ype Definition')
-  nmap('K', '<cmd>Lspsaga hover_doc<CR>', 'Hover Documentation')
   nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
   nmap(
     '<space>lf',
@@ -72,6 +73,31 @@ require('mason-lspconfig').setup()
 
 -- LSP Status Indicator
 require('fidget').setup()
+
+-- LSP Hover UI
+require('hover').setup {
+  init = function()
+    require 'hover.providers.lsp'
+    require 'hover.providers.gh'
+    if not U.is_win() then
+      require 'hover.providers.man'
+    end
+  end,
+}
+
+vim.keymap.set(
+  'n',
+  'K',
+  require('hover').hover,
+  { desc = 'Hover Documentation' }
+)
+vim.keymap.set(
+  'n',
+  'gK',
+  require('hover').hover_select,
+  { desc = 'Hover Documentation (select)' }
+)
+
 -- LSP UI
 require('lspsaga').init_lsp_saga {
   move_in_saga = { prev = '<C-d>', next = '<C-f>' },
