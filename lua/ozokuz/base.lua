@@ -30,16 +30,10 @@ o.backup = false
 o.swapfile = false
 o.showcmd = true
 o.laststatus = 2
-o.expandtab = true
 o.scrolloff = 10
 o.inccommand = 'split'
 o.ignorecase = true
-o.smarttab = true
 o.breakindent = true
-o.shiftwidth = 2
-o.tabstop = 2
-o.ai = true
-o.si = true
 o.wrap = false
 o.backspace = 'start,eol,indent'
 o.path:append { '**' }

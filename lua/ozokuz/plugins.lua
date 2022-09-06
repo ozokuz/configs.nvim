@@ -96,6 +96,8 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   -- Blank line indents
   use 'lukas-reineke/indent-blankline.nvim'
+  -- Automatic Indentation
+  use 'tpope/vim-sleuth'
 
   -- If packer was just installed then sync plugins
   if packer_bootstrap then
