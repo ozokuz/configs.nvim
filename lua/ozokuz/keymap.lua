@@ -28,6 +28,8 @@ end
 
 -- New tab
 keymap('<leader>te', '<cmd>tabedit<CR>', '[T]ab: [E]dit')
+keymap('<leader>tj', '<cmd>tabprevious<CR>', '[T]ab: Previous')
+keymap('<leader>tk', '<cmd>tabnext<CR>', '[T]ab: Next')
 
 -- Split Window
 keymap('<leader>ws', '<cmd>split<CR><C-w>w', '[W]indow: [S]plit Horizontal')
