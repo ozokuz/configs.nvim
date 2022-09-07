@@ -60,8 +60,9 @@ local on_attach = function(client, bufnr)
         vim.lsp.buf.format {
           buffer = bufnr,
           filter = function(c)
-            -- Ignore TypeScript server provided formatting as prettier should be used instead
-            return c.name ~= 'tsserver'
+            -- Ignore some language servers' formatting
+            -- when a standalone formatting tool should be used instead
+            return c.name ~= 'tsserver' and c.name ~= 'jsonls'
           end,
         }
       end,
