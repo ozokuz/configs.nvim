@@ -153,3 +153,9 @@ null_ls.setup {
     null_ls.builtins.diagnostics.selene,
   },
 }
+
+vim.diagnostic.config {
+  virtual_text = {
+    source = 'always',
+  },
+}
