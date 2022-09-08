@@ -36,7 +36,7 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   -- Tabline
   use { 'akinsho/bufferline.nvim', tag = 'v2.*' }
-  -- File Tree
+  -- File Explorer
   use 'kyazdani42/nvim-tree.lua'
   -- Floating Terminal
   use 'voldikss/vim-floaterm'

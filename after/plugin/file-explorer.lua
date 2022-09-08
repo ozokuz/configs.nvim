@@ -25,5 +25,5 @@ vim.keymap.set(
   'n',
   '<leader>ff',
   '<cmd>NvimTreeToggle<CR>',
-  { noremap = true, silent = true, desc = '[F]iles: Open [F]ile Tree' }
+  { noremap = true, silent = true, desc = '[F]iles: Open [F]ile Explorer' }
 )
