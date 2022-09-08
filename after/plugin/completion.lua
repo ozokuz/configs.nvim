@@ -1,6 +1,7 @@
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 local lspkind = require 'lspkind'
+local autopairs = require 'nvim-autopairs.completion.cmp'
 
 cmp.setup {
   formatting = {
@@ -70,3 +71,5 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' },
   }),
 })
+
+cmp.event:on('confirm_done', autopairs.on_confirm_done())

@@ -99,6 +99,9 @@ return require('packer').startup {
     use 'lukas-reineke/indent-blankline.nvim'
     -- Automatic Indentation
     use 'tpope/vim-sleuth'
+    -- Auto Pairs
+    use 'windwp/nvim-autopairs'
+    use 'windwp/nvim-ts-autotag'
 
     -- If packer was just installed then sync plugins
     if packer_bootstrap then
