@@ -3,6 +3,7 @@ local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath 'data'
     .. '/site/pack/packer/start/packer.nvim'
+  ---@diagnostic disable-next-line: missing-parameter
   if fn.empty(fn.glob(install_path)) > 0 then
     fn.system {
       'git',
@@ -102,6 +103,16 @@ return require('packer').startup {
     -- Auto Pairs
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
+    -- Fuzzy Finding
+    use { 'nvim-telescope/telescope.nvim', branch = '0.1.x' }
+    use {
+      'nvim-telescope/telescope-fzf-native.nvim',
+      run = 'make',
+      cond = vim.fn.executable 'make' == 1,
+    }
+    use 'nvim-telescope/telescope-live-grep-args.nvim'
+    use 'nvim-telescope/telescope-github.nvim'
+    use 'nvim-telescope/telescope-symbols.nvim'
 
     -- If packer was just installed then sync plugins
     if packer_bootstrap then
