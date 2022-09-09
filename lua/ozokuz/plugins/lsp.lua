@@ -1,4 +1,4 @@
-local U = require 'ozokuz.utils'
+local U = require 'ozokuz.core.utils'
 
 -- Setup Capabilities
 local capabilities = require('cmp_nvim_lsp').update_capabilities(

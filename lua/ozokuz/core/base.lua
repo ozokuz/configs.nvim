@@ -1,4 +1,4 @@
-local U = require 'ozokuz.utils'
+local U = require 'ozokuz.core.utils'
 
 local o = vim.opt
 
