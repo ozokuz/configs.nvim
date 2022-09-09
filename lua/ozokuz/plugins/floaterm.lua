@@ -1,4 +1,6 @@
-vim.cmd [[FloatermNew --height=0.4 --wintype=split --name=integrated --silent]]
+vim.schedule(function()
+  vim.cmd [[FloatermNew --height=0.4 --wintype=split --name=integrated --silent]]
+end)
 
 local function keymap(mode, keys, func, desc)
   vim.keymap.set(
