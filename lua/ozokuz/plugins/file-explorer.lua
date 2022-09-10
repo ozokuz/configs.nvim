@@ -36,10 +36,3 @@ vim.api.nvim_create_autocmd('BufEnter', {
     end
   end,
 })
-
-vim.keymap.set(
-  'n',
-  '<leader>ff',
-  '<cmd>NvimTreeToggle<CR>',
-  { noremap = true, silent = true, desc = '[F]iles: Open [F]ile Explorer' }
-)

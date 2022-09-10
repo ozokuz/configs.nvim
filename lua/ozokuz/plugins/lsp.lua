@@ -1,4 +1,5 @@
 local U = require 'ozokuz.core.utils'
+local keymaps = require 'ozokuz.core.keymaps'
 
 -- Setup Capabilities
 local capabilities = require('cmp_nvim_lsp').update_capabilities(
@@ -15,32 +16,8 @@ local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 
 -- Setup Attach Configuration
 local on_attach = function(client, bufnr)
-  local nmap = function(keys, func, desc)
-    if desc then
-      desc = 'LSP: ' .. desc
-    end
-
-    vim.keymap.set(
-      'n',
-      keys,
-      func,
-      { buffer = bufnr, desc = desc, noremap = true, silent = true }
-    )
-  end
-
-  nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
-  nmap('gi', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
-  nmap('gr', '<cmd>Lspsaga lsp_finder<CR>', '[G]oto [R]eferences')
-  nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-  nmap('gT', vim.lsp.buf.type_definition, '[G]oto [T]ype Definition')
-  nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
-  nmap(
-    '<space>lf',
-    vim.lsp.buf.format or vim.lsp.buf.formatting,
-    '[F]ormat Document'
-  )
-  nmap('<space>lc', '<cmd>Lspsaga code_action<CR>', '[C]ode Action')
-  nmap('<space>lr', '<cmd>Lspsaga rename<CR>', '[R]ename')
+  -- Setup Keymaps
+  keymaps.lsp(bufnr)
 
   -- Setup Document Color Support
   if client.server_capabilities.colorProvider then
@@ -80,12 +57,7 @@ require('fidget').setup()
 -- LSP Document Outline
 require('aerial').setup {
   on_attach = function(bufnr)
-    vim.keymap.set(
-      'n',
-      '<space>lo',
-      '<cmd>AerialToggle!<CR>',
-      { buffer = bufnr, desc = '[O]utline' }
-    )
+    keymaps.aerial(bufnr)
   end,
 }
 
@@ -99,19 +71,6 @@ require('hover').setup {
     end
   end,
 }
-
-vim.keymap.set(
-  'n',
-  'K',
-  require('hover').hover,
-  { desc = 'Hover Documentation' }
-)
-vim.keymap.set(
-  'n',
-  'gK',
-  require('hover').hover_select,
-  { desc = 'Hover Documentation (select)' }
-)
 
 -- LSP UI
 require('lspsaga').init_lsp_saga {
