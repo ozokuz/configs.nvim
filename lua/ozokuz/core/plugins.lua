@@ -79,9 +79,7 @@ return {
   ['nvim-telescope/telescope.nvim'] = { branch = '0.1.x' },
   ['nvim-telescope/telescope-fzf-native.nvim'] = {
     run = 'make',
-    cond = vim.fn.executable 'make' == 1,
   },
   ['nvim-telescope/telescope-live-grep-args.nvim'] = {},
   ['nvim-telescope/telescope-github.nvim'] = {},
-  ['nvim-telescope/telescope-symbols.nvim'] = {},
 }
