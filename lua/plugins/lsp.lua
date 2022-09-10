@@ -1,5 +1,5 @@
-local U = require 'ozokuz.core.utils'
-local keymaps = require 'ozokuz.core.keymaps'
+local U = require 'core.utils'
+local keymaps = require 'core.keymaps'
 
 -- Setup Capabilities
 local capabilities = require('cmp_nvim_lsp').update_capabilities(

@@ -32,7 +32,7 @@ packer.init {
 }
 
 -- Setup plugins
-local plugins = require 'ozokuz.core.plugins'
+local plugins = require 'core.plugins'
 
 for plugin, config in pairs(plugins) do
   config[1] = plugin

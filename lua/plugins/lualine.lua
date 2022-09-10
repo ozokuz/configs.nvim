@@ -1,4 +1,4 @@
-local U = require 'ozokuz.core.utils'
+local U = require 'core.utils'
 
 require('lualine').setup {
   options = {

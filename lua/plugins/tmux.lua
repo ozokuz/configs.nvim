@@ -4,4 +4,4 @@ tmux.setup {
   disable_when_zoomed = true,
 }
 
-require('ozokuz.core.keymaps').tmux()
+require('core.keymaps').tmux()

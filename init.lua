@@ -1,2 +1,2 @@
-require 'ozokuz.core'
-require 'ozokuz.plugins'
+require 'core'
+require 'plugins'

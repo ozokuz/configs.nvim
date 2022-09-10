@@ -1,6 +1,6 @@
-require 'ozokuz.core.options'
+require 'core.options'
 
-local keymaps = require 'ozokuz.core.keymaps'
+local keymaps = require 'core.keymaps'
 
 for key, action in pairs(keymaps.normal) do
   vim.keymap.set('n', key, action, keymaps.opts)
@@ -19,4 +19,4 @@ for keys, config in pairs(keymaps.leader) do
   )
 end
 
-require 'ozokuz.core.packer'
+require 'core.packer'

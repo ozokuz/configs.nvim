@@ -2,7 +2,7 @@ local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 local lspkind = require 'lspkind'
 local autopairs = require 'nvim-autopairs.completion.cmp'
-local keymaps = require('ozokuz.core.keymaps').cmp()
+local keymaps = require('core.keymaps').cmp()
 
 cmp.setup {
   formatting = {
