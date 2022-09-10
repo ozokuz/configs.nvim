@@ -8,9 +8,6 @@ vim.scriptencoding = 'utf-8'
 o.encoding = 'utf-8'
 o.fileencoding = 'utf-8'
 
-vim.wo.number = true
-vim.wo.relativenumber = true
-
 if U.is_nvim_080() then
   o.cmdheight = 0
 else
@@ -24,6 +21,10 @@ else
   o.shell = 'fish'
 end
 
+o.number = true
+o.relativenumber = true
+o.splitbelow = true
+o.splitright = true
 o.title = true
 o.autoindent = true
 o.hlsearch = true
