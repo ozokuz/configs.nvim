@@ -1,3 +1,3 @@
-require('ozokuz.core.base')
-require('ozokuz.core.keymap')
-require('ozokuz.core.plugins')
+require 'ozokuz.core.base'
+require 'ozokuz.core.keymap'
+require 'ozokuz.core.packer'
