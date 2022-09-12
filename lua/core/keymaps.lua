@@ -60,6 +60,10 @@ M.leader = {
     a = '<cmd>FloatermNew --height=0.8 --width=0.8 lazygit<CR>',
     d = '[G]it: [L]azygit',
   },
+  ['gg'] = {
+    a = '<cmd>Neogit<CR>',
+    d = '[G]it: Open',
+  },
   ['fe'] = {
     a = '<cmd>NvimTreeToggle<CR>',
     d = '[F]iles: File [E]xplorer',

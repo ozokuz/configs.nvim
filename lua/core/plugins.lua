@@ -74,6 +74,8 @@ return {
   ['lewis6991/gitsigns.nvim'] = {},
   -- Diffview
   ['sindrets/diffview.nvim'] = {},
+  -- Git Interface
+  ['TimUntersberger/neogit'] = {},
   -- Blank line indents
   ['lukas-reineke/indent-blankline.nvim'] = {},
   -- Automatic Indentation
