@@ -72,6 +72,8 @@ return {
   ['mrshmllow/document-color.nvim'] = {},
   -- Git Signs
   ['lewis6991/gitsigns.nvim'] = {},
+  -- Diffview
+  ['sindrets/diffview.nvim'] = {},
   -- Blank line indents
   ['lukas-reineke/indent-blankline.nvim'] = {},
   -- Automatic Indentation
