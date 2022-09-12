@@ -101,4 +101,6 @@ return {
   },
   -- Dashboard
   ['goolord/alpha-nvim'] = {},
+  -- Session Management
+  ['Shatur/neovim-session-manager'] = {},
 }

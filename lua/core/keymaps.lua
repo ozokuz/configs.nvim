@@ -82,6 +82,26 @@ M.leader = {
     a = '<cmd>ZenMode<CR>',
     d = '[Z]en Mode',
   },
+  ['sl'] = {
+    a = '<cmd>SessionManager load_session<CR>',
+    d = '[S]ession: [L]oad',
+  },
+  ['sL'] = {
+    a = '<cmd>SessionManager load_last_session<CR>',
+    d = '[S]ession: Load [L]ast',
+  },
+  ['sd'] = {
+    a = '<cmd>SessionManager delete_session<CR>',
+    d = '[S]ession: [D]elete',
+  },
+  ['sc'] = {
+    a = '<cmd>SessionManager load_current_dir_session<CR>',
+    d = '[S]ession: Load [C]urrent Directory',
+  },
+  ['ss'] = {
+    a = '<cmd>SessionManager save_current_session<CR>',
+    d = '[S]ession: [S]ave Current',
+  },
 }
 
 function M.tmux()
