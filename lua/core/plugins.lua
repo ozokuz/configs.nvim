@@ -99,4 +99,6 @@ return {
     end,
     ft = { 'markdown' },
   },
+  -- Dashboard
+  ['goolord/alpha-nvim'] = {},
 }
