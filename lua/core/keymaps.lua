@@ -27,6 +27,8 @@ M.normal = {
   ['gK'] = function()
     require('hover').hover_select()
   end,
+  ['öj'] = vim.diagnostic.goto_prev,
+  ['ök'] = vim.diagnostic.goto_next,
 }
 
 M.visual = {
@@ -70,6 +72,10 @@ M.leader = {
       require('telescope').extensions.live_grep_args.live_grep_args()
     end,
     d = '[F]iles: [G]rep',
+  },
+  ['ld'] = {
+    a = '<cmd>TroubleToggle<CR>',
+    d = '[L]sp: [D]iagnostics List',
   },
 }
 

@@ -36,6 +36,7 @@ return {
       'williamboman/mason-lspconfig.nvim',
       'jose-elias-alvarez/null-ls.nvim',
       'neovim/nvim-lspconfig',
+      'folke/trouble.nvim',
       'stevearc/dressing.nvim',
       'lewis6991/hover.nvim',
       'stevearc/aerial.nvim',
