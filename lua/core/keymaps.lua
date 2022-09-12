@@ -7,6 +7,7 @@ M.opts = {
 
 -- Set leader key
 vim.g.mapleader = ' '
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 M.normal = {
   -- No x yank
