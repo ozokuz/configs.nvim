@@ -1,6 +1,8 @@
 return {
   -- Manage itself
   ['wbthomason/packer.nvim'] = {},
+  -- Impatient, speed boost
+  ['lewis6991/impatient.nvim'] = {},
   -- The Lodash of Neovim
   ['nvim-lua/plenary.nvim'] = {},
   -- Icons
