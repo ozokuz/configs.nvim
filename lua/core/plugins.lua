@@ -75,6 +75,8 @@ return {
   -- Auto Pairs
   ['windwp/nvim-autopairs'] = {},
   ['windwp/nvim-ts-autotag'] = {},
+  -- Surround
+  ['kylechui/nvim-surround'] = {},
   -- Fuzzy Finding
   ['nvim-telescope/telescope.nvim'] = { branch = '0.1.x' },
   ['nvim-telescope/telescope-fzf-native.nvim'] = {
