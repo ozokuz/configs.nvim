@@ -31,16 +31,15 @@ return {
     },
   },
   -- LSP
-  ['glepnir/lspsaga.nvim'] = {
-    branch = 'main',
+  ['williamboman/mason.nvim'] = {
     requires = {
-      'lewis6991/hover.nvim',
-      'stevearc/aerial.nvim',
-      'j-hui/fidget.nvim',
-      'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
       'jose-elias-alvarez/null-ls.nvim',
       'neovim/nvim-lspconfig',
+      'stevearc/dressing.nvim',
+      'lewis6991/hover.nvim',
+      'stevearc/aerial.nvim',
+      'j-hui/fidget.nvim',
     },
   },
   -- Language specific plugins

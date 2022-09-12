@@ -72,11 +72,6 @@ require('hover').setup {
   end,
 }
 
--- LSP UI
-require('lspsaga').init_lsp_saga {
-  move_in_saga = { prev = '<C-d>', next = '<C-f>' },
-}
-
 -- Setup LSP Servers
 local lspconfig = require 'lspconfig'
 require('mason-lspconfig').setup_handlers {

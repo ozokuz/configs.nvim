@@ -141,14 +141,22 @@ function M.lsp(bufnr)
     )
   end
 
-  nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
-  nmap('gi', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
-  nmap('gr', '<cmd>Lspsaga lsp_finder<CR>', '[G]oto [R]eferences')
+  nmap('gd', '<cmd>Telescope lsp_definitions<CR>', '[G]oto [D]efinition')
+  nmap(
+    'gi',
+    '<cmd>Telescope lsp_implementations<CR>',
+    '[G]oto [I]mplementation'
+  )
+  nmap('gr', '<cmd>Telescope lsp_references<CR>', '[G]oto [R]eferences')
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-  nmap('gT', vim.lsp.buf.type_definition, '[G]oto [T]ype Definition')
-  nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
-  nmap('<space>lc', '<cmd>Lspsaga code_action<CR>', '[C]ode Action')
-  nmap('<space>lr', '<cmd>Lspsaga rename<CR>', '[R]ename')
+  nmap(
+    'gT',
+    '<cmd>Telescope lsp_type_definitions<CR>',
+    '[G]oto [T]ype Definition'
+  )
+  nmap('<leader>lk', vim.lsp.buf.signature_help, 'Signature Documentation')
+  nmap('<leader>lc', vim.lsp.buf.code_action, '[C]ode Action')
+  nmap('<leader>lr', vim.lsp.buf.rename, '[R]ename')
 end
 
 function M.aerial(bufnr)
