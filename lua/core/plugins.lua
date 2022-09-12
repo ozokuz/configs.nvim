@@ -77,6 +77,8 @@ return {
   ['windwp/nvim-ts-autotag'] = {},
   -- Surround
   ['kylechui/nvim-surround'] = {},
+  -- Leap
+  ['ggandor/leap.nvim'] = {},
   -- Zen Mode
   ['folke/twilight.nvim'] = {},
   ['folke/zen-mode.nvim'] = {},
