@@ -63,6 +63,8 @@ return {
   ['JoosepAlviste/nvim-ts-context-commentstring'] = {},
   -- Doc Strings
   ['danymat/neogen'] = {},
+  -- Better Comments
+  ['Djancyp/better-comments.nvim'] = {},
   -- Colorizing
   ['NvChad/nvim-colorizer.lua'] = {},
   ['mrshmllow/document-color.nvim'] = {},
