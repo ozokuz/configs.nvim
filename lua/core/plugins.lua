@@ -87,4 +87,12 @@ return {
   },
   ['nvim-telescope/telescope-live-grep-args.nvim'] = {},
   ['nvim-telescope/telescope-github.nvim'] = {},
+  -- Markdown Preview
+  ['iamcco/markdown-preview.nvim'] = {
+    run = 'cd app && npm install',
+    setup = function()
+      vim.g.mkdp_filetypes = { 'markdown' }
+    end,
+    ft = { 'markdown' },
+  },
 }
