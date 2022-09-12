@@ -77,6 +77,9 @@ return {
   ['windwp/nvim-ts-autotag'] = {},
   -- Surround
   ['kylechui/nvim-surround'] = {},
+  -- Zen Mode
+  ['folke/twilight.nvim'] = {},
+  ['folke/zen-mode.nvim'] = {},
   -- Fuzzy Finding
   ['nvim-telescope/telescope.nvim'] = { branch = '0.1.x' },
   ['nvim-telescope/telescope-fzf-native.nvim'] = {

@@ -78,6 +78,10 @@ M.leader = {
     a = '<cmd>TroubleToggle<CR>',
     d = '[L]sp: [D]iagnostics List',
   },
+  ['z'] = {
+    a = '<cmd>ZenMode<CR>',
+    d = '[Z]en Mode',
+  },
 }
 
 function M.tmux()
