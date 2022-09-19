@@ -69,7 +69,19 @@ M.leader = {
     d = '[F]iles: File [E]xplorer',
   },
   ['ff'] = {
-    a = '<cmd>Telescope find_files<CR>',
+    a = function()
+      require('telescope.builtin').find_files {
+        find_command = {
+          'rg',
+          '--files',
+          '--color',
+          'never',
+          '-g',
+          '!.git',
+          '--hidden',
+        },
+      }
+    end,
     d = '[F]iles: [F]ind',
   },
   ['fg'] = {
