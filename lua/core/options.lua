@@ -9,7 +9,7 @@ o.encoding = 'utf-8'
 o.fileencoding = 'utf-8'
 
 if U.is_nvim_080() then
-  o.cmdheight = 0
+  o.cmdheight = 1
 else
   o.cmdheight = 1
   o.mouse = 'a'
