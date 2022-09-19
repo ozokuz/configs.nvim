@@ -84,6 +84,23 @@ M.leader = {
     end,
     d = '[F]iles: [F]ind',
   },
+  ['fF'] = {
+    a = function()
+      require('telescope.builtin').find_files {
+        find_command = {
+          'rg',
+          '--files',
+          '--color',
+          'never',
+          '-g',
+          '!.git',
+          '--hidden',
+          '--no-ignore',
+        },
+      }
+    end,
+    d = '[F]iles: [F]ind',
+  },
   ['fg'] = {
     a = function()
       require('telescope').extensions.live_grep_args.live_grep_args()
