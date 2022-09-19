@@ -16,7 +16,7 @@ else
 end
 
 if U.is_win() then
-  o.shell = 'pwsh.exe'
+  o.shell = 'cmd.exe'
 else
   o.shell = 'fish'
 end
