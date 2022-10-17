@@ -221,6 +221,9 @@ function M.lsp(bufnr)
   nmap('<leader>lk', vim.lsp.buf.signature_help, 'Signature Documentation')
   nmap('<leader>lc', vim.lsp.buf.code_action, '[C]ode Action')
   nmap('<leader>lr', vim.lsp.buf.rename, '[R]ename')
+  nmap('<leader>lf', function()
+    require('plugins.lsp_utils').format()
+  end, '[F]ormat')
 end
 
 function M.aerial(bufnr)

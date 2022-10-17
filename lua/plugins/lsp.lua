@@ -34,14 +34,7 @@ local on_attach = function(client, bufnr)
       group = augroup,
       buffer = bufnr,
       callback = function()
-        vim.lsp.buf.format {
-          buffer = bufnr,
-          filter = function(c)
-            -- Ignore some language servers' formatting
-            -- when a standalone formatting tool should be used instead
-            return c.name ~= 'tsserver' and c.name ~= 'jsonls'
-          end,
-        }
+        require('plugins.lsp_utils').format(bufnr)
       end,
     })
   end
@@ -105,6 +98,8 @@ null_ls.setup {
     null_ls.builtins.formatting.stylua,
     null_ls.builtins.diagnostics.eslint_d,
     null_ls.builtins.diagnostics.selene,
+    null_ls.builtins.formatting.black,
+    null_ls.builtins.diagnostics.pylint,
   },
 }
 
