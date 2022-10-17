@@ -51,6 +51,13 @@ M.leader = {
   ['wq'] = { a = '<cmd>wq<CR>', d = '[W]indow: Save & Close' },
   -- Destroy Buffer
   ['wd'] = { a = '<cmd>q!<CR>', d = '[W]indow: Destroy' },
+  -- Resize Windows
+  ['wr'] = {
+    a = function()
+      require('smart-splits').start_resize_mode()
+    end,
+    d = '[W]indow: [R]esize Mode',
+  },
   -- Window List
   ['wl'] = { a = '<cmd>Telescope buffers<CR>', d = '[W]indow: [L]ist' },
   -- Quit Without Saving
@@ -139,21 +146,19 @@ M.leader = {
   },
 }
 
-function M.tmux()
-  local tmux = require 'nvim-tmux-navigation'
-  local modes = { 'n', 'i', 'v', 'x', 't' }
-  local maps = {
-    ['<C-h>'] = tmux.NvimTmuxNavigateLeft,
-    ['<C-j>'] = tmux.NvimTmuxNavigateDown,
-    ['<C-k>'] = tmux.NvimTmuxNavigateUp,
-    ['<C-l>'] = tmux.NvimTmuxNavigateRight,
-  }
+function M.smart_splits()
+  local smart_splits = require 'smart-splits'
 
-  for _, mode in ipairs(modes) do
-    for keys, action in pairs(maps) do
-      vim.keymap.set(mode, keys, action, M.opts)
-    end
-  end
+  -- resizing splits
+  vim.keymap.set('n', '<A-h>', smart_splits.resize_left, M.opts)
+  vim.keymap.set('n', '<A-j>', smart_splits.resize_down, M.opts)
+  vim.keymap.set('n', '<A-k>', smart_splits.resize_up, M.opts)
+  vim.keymap.set('n', '<A-l>', smart_splits.resize_right, M.opts)
+  -- moving between splits
+  vim.keymap.set('n', '<C-h>', smart_splits.move_cursor_left, M.opts)
+  vim.keymap.set('n', '<C-j>', smart_splits.move_cursor_down, M.opts)
+  vim.keymap.set('n', '<C-k>', smart_splits.move_cursor_up, M.opts)
+  vim.keymap.set('n', '<C-l>', smart_splits.move_cursor_right, M.opts)
 end
 
 function M.terminal()

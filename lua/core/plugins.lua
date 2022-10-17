@@ -9,8 +9,8 @@ return {
   ['kyazdani42/nvim-web-devicons'] = {},
   -- Colorscheme
   ['folke/tokyonight.nvim'] = {},
-  -- Tmux Integration
-  ['alexghergh/nvim-tmux-navigation'] = {},
+  -- Smart Splits
+  ['mrjones2014/smart-splits.nvim'] = {},
   -- Statusline
   ['nvim-lualine/lualine.nvim'] = {},
   -- Tabline

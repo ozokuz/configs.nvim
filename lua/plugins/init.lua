@@ -1,5 +1,5 @@
 require 'plugins.colorscheme'
-require 'plugins.tmux'
+require 'plugins.smart-splits'
 require 'plugins.completion'
 require 'plugins.lsp'
 require 'plugins.treesitter'
