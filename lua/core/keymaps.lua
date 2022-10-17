@@ -51,6 +51,8 @@ M.leader = {
   ['wq'] = { a = '<cmd>wq<CR>', d = '[W]indow: Save & Close' },
   -- Destroy Buffer
   ['wd'] = { a = '<cmd>q!<CR>', d = '[W]indow: Destroy' },
+  -- Window List
+  ['wl'] = { a = '<cmd>Telescope buffers<CR>', d = '[W]indow: [L]ist' },
   -- Quit Without Saving
   ['qq'] = { a = '<cmd>qa!<CR>', d = '[Q]uit: All Without Saving' },
   -- Save & Quit All
