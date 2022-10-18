@@ -8,6 +8,8 @@ require('gitsigns').setup {
   },
 }
 
+require('neogit').setup { integrations = { diffview = true } }
+
 local Terminal = require('toggleterm.terminal').Terminal
 local lazygit =
   Terminal:new { cmd = 'lazygit', hidden = true, direction = 'float' }
