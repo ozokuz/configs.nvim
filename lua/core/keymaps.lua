@@ -64,11 +64,7 @@ M.leader = {
   ['qq'] = { a = '<cmd>qa!<CR>', d = '[Q]uit: All Without Saving' },
   -- Save & Quit All
   ['qw'] = { a = '<cmd>wall<CR><cmd>qall<CR>', d = '[Q]uit: Save All' },
-  -- lazygit
-  ['gl'] = {
-    a = '<cmd>FloatermNew --height=0.8 --width=0.8 lazygit<CR>',
-    d = '[G]it: [L]azygit',
-  },
+  -- Git
   ['gg'] = {
     a = '<cmd>Neogit<CR>',
     d = '[G]it: Open',
@@ -156,16 +152,28 @@ function M.smart_splits()
   vim.keymap.set('n', '<A-j>', smart_splits.resize_down, M.opts)
   vim.keymap.set('n', '<A-k>', smart_splits.resize_up, M.opts)
   vim.keymap.set('n', '<A-l>', smart_splits.resize_right, M.opts)
+  vim.keymap.set('t', '<A-h>', smart_splits.resize_left, M.opts)
+  vim.keymap.set('t', '<A-j>', smart_splits.resize_down, M.opts)
+  vim.keymap.set('t', '<A-k>', smart_splits.resize_up, M.opts)
+  vim.keymap.set('t', '<A-l>', smart_splits.resize_right, M.opts)
   -- moving between splits
   vim.keymap.set('n', '<C-h>', smart_splits.move_cursor_left, M.opts)
   vim.keymap.set('n', '<C-j>', smart_splits.move_cursor_down, M.opts)
   vim.keymap.set('n', '<C-k>', smart_splits.move_cursor_up, M.opts)
   vim.keymap.set('n', '<C-l>', smart_splits.move_cursor_right, M.opts)
+  vim.keymap.set('t', '<C-h>', smart_splits.move_cursor_left, M.opts)
+  vim.keymap.set('t', '<C-j>', smart_splits.move_cursor_down, M.opts)
+  vim.keymap.set('t', '<C-k>', smart_splits.move_cursor_up, M.opts)
+  vim.keymap.set('t', '<C-l>', smart_splits.move_cursor_right, M.opts)
 end
 
-function M.terminal()
-  vim.keymap.set('n', '<F12>', '<cmd>FloatermToggle integrated<CR>', M.opts)
-  vim.keymap.set('t', '<F12>', '<cmd>FloatermToggle integrated<CR>', M.opts)
+function M.git(lazygit)
+  local function toggle_lazygit()
+    lazygit:toggle()
+  end
+
+  vim.keymap.set('n', '<leader>gl', toggle_lazygit, M.opts)
+  vim.keymap.set('t', '<leader>gl', toggle_lazygit, M.opts)
 end
 
 function M.cmp()

@@ -19,8 +19,8 @@ return {
   ['akinsho/bufferline.nvim'] = { tag = 'v2.*' },
   -- File Explorer
   ['kyazdani42/nvim-tree.lua'] = {},
-  -- Floating Terminal
-  ['voldikss/vim-floaterm'] = {},
+  -- Terminal
+  ['akinsho/toggleterm.nvim'] = { tag = '*' },
   -- Show keybinds
   ['folke/which-key.nvim'] = {},
   -- Treesitter

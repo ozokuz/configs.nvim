@@ -7,3 +7,9 @@ require('gitsigns').setup {
     changedelete = { text = '~' },
   },
 }
+
+local Terminal = require('toggleterm.terminal').Terminal
+local lazygit =
+  Terminal:new { cmd = 'lazygit', hidden = true, direction = 'float' }
+
+require('core.keymaps').git(lazygit)
