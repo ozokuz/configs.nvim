@@ -2,9 +2,7 @@ local U = require 'core.utils'
 local keymaps = require 'core.keymaps'
 
 -- Setup Capabilities
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
-  vim.lsp.protocol.make_client_capabilities()
-)
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- Add color provider capability
 capabilities.textDocument.colorProvider = {
@@ -65,6 +63,8 @@ require('hover').setup {
   end,
 }
 
+require('neodev').setup {}
+
 -- Setup LSP Servers
 local lspconfig = require 'lspconfig'
 require('mason-lspconfig').setup_handlers {
@@ -74,18 +74,6 @@ require('mason-lspconfig').setup_handlers {
       capabilities = capabilities,
       on_attach = on_attach,
     }
-  end,
-
-  -- Language Specific Configuration
-  -- Neovim Lua
-  ['sumneko_lua'] = function()
-    local luadev = require('lua-dev').setup {
-      lspconfig = {
-        capabilities = capabilities,
-        on_attach = on_attach,
-      },
-    }
-    lspconfig.sumneko_lua.setup(luadev)
   end,
 }
 

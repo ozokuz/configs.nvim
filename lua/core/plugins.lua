@@ -46,7 +46,7 @@ return {
     },
   },
   -- Language specific plugins
-  ['folke/lua-dev.nvim'] = {},
+  ['folke/neodev.nvim'] = {},
   -- Completion
   ['hrsh7th/nvim-cmp'] = {
     requires = {
