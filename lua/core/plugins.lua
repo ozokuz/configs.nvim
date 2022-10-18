@@ -78,6 +78,8 @@ return {
   ['sindrets/diffview.nvim'] = {},
   -- Git Interface
   ['TimUntersberger/neogit'] = {},
+  -- Open in GitHub
+  ['almo7aya/openingh.nvim'] = {},
   -- Blank line indents
   ['lukas-reineke/indent-blankline.nvim'] = {},
   -- Automatic Indentation

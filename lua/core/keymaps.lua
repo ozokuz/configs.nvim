@@ -73,6 +73,8 @@ M.leader = {
     a = '<cmd>Neogit<CR>',
     d = '[G]it: Open',
   },
+  ['gr'] = { a = '<cmd>OpenInGHRepo<CR>', d = '[G]it: Open Web Repo' },
+  ['gf'] = { a = '<cmd>OpenInGHFile<CR>', d = '[G]it: Open Web File' },
   ['fe'] = {
     a = '<cmd>NvimTreeToggle<CR>',
     d = '[F]iles: File [E]xplorer',
