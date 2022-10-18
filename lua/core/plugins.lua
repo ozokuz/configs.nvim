@@ -72,6 +72,8 @@ return {
   -- Colorizing
   ['NvChad/nvim-colorizer.lua'] = {},
   ['mrshmllow/document-color.nvim'] = {},
+  -- Color Picker
+  ['uga-rosa/ccc.nvim'] = {},
   -- Git Signs
   ['lewis6991/gitsigns.nvim'] = {},
   -- Diffview

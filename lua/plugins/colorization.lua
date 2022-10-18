@@ -11,3 +11,5 @@ require('colorizer').setup {
     '!dart',
   },
 }
+
+require('ccc').setup {}
