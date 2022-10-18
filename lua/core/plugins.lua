@@ -11,6 +11,8 @@ return {
   ['folke/tokyonight.nvim'] = {},
   -- Smart Splits
   ['mrjones2014/smart-splits.nvim'] = {},
+  -- Better Escape
+  ['max397574/better-escape.nvim'] = {},
   -- Statusline
   ['nvim-lualine/lualine.nvim'] = {},
   -- Tabline
