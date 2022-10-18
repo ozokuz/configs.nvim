@@ -105,6 +105,10 @@ return {
   },
   ['nvim-telescope/telescope-live-grep-args.nvim'] = {},
   ['nvim-telescope/telescope-github.nvim'] = {},
+  -- Better Neovim UI
+  ['rcarriga/nvim-notify'] = {},
+  ['MunifTanjim/nui.nvim'] = {},
+  ['folke/noice.nvim'] = {},
   -- Better Lists
   ['gaoDean/autolist.nvim'] = {},
   -- Markdown Preview
