@@ -67,6 +67,8 @@ return {
   ['danymat/neogen'] = {},
   -- Better Comments
   ['Djancyp/better-comments.nvim'] = {},
+  -- Cursor Word Highlight
+  ['RRethy/vim-illuminate'] = {},
   -- Colorizing
   ['NvChad/nvim-colorizer.lua'] = {},
   ['mrshmllow/document-color.nvim'] = {},
