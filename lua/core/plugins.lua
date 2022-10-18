@@ -103,6 +103,8 @@ return {
   },
   ['nvim-telescope/telescope-live-grep-args.nvim'] = {},
   ['nvim-telescope/telescope-github.nvim'] = {},
+  -- Better Lists
+  ['gaoDean/autolist.nvim'] = {},
   -- Markdown Preview
   ['iamcco/markdown-preview.nvim'] = {
     run = 'cd app && npm install',
