@@ -115,7 +115,7 @@ M.leader = {
     d = '[F]iles: [G]rep',
   },
   ['ld'] = {
-    a = '<cmd>TroubleToggle<CR>',
+    a = '<cmd>Trouble workspace_diagnostics<CR>',
     d = '[L]sp: [D]iagnostics List',
   },
   ['z'] = {
@@ -141,6 +141,14 @@ M.leader = {
   ['ss'] = {
     a = '<cmd>SessionManager save_current_session<CR>',
     d = '[S]ession: [S]ave Current',
+  },
+  ['tf'] = {
+    a = '<cmd>TodoTelescope<CR>',
+    d = '[T]odo: [F]ind',
+  },
+  ['tl'] = {
+    a = '<cmd>TodoTrouble<CR>',
+    d = '[T]odo: [L]ist',
   },
 }
 

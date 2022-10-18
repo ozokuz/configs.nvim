@@ -67,8 +67,8 @@ return {
   ['JoosepAlviste/nvim-ts-context-commentstring'] = {},
   -- Doc Strings
   ['danymat/neogen'] = {},
-  -- Better Comments
-  ['Djancyp/better-comments.nvim'] = {},
+  -- Todo Comments
+  ['folke/todo-comments.nvim'] = {},
   -- Cursor Word Highlight
   ['RRethy/vim-illuminate'] = {},
   -- Colorizing

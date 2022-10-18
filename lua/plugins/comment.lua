@@ -4,4 +4,4 @@ require('Comment').setup {
 
 require('neogen').setup { snippet_engine = 'luasnip' }
 
-require('better-comment').Setup {}
+require('todo-comments').setup {}
