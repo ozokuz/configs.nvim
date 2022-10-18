@@ -1,6 +1,4 @@
-local U = require 'core.utils'
-
-local o = vim.opt
+local o = vim.o
 
 vim.cmd 'autocmd!'
 
@@ -8,18 +6,7 @@ vim.scriptencoding = 'utf-8'
 o.encoding = 'utf-8'
 o.fileencoding = 'utf-8'
 
-if U.is_nvim_080() then
-  o.cmdheight = 1
-else
-  o.cmdheight = 1
-  o.mouse = 'a'
-end
-
-if U.is_win() then
-  o.shell = 'cmd.exe'
-else
-  o.shell = 'fish'
-end
+require 'core.shell'
 
 o.number = true
 o.relativenumber = true
@@ -39,16 +26,16 @@ o.smartcase = true
 o.breakindent = true
 o.wrap = false
 o.backspace = 'start,eol,indent'
-o.path:append { '**' }
-o.wildignore:append { '*/node_modules/*' }
-o.formatoptions:append { 'r' }
+vim.opt.path:append { '**' }
+vim.opt.wildignore:append { '*/node_modules/*' }
+vim.opt.formatoptions:append { 'r' }
 o.cursorline = true
 o.termguicolors = true
 o.winblend = 0
 o.wildoptions = 'pum'
 o.pumblend = 5
 o.background = 'dark'
-o.clipboard:append { 'unnamedplus' }
+vim.opt.clipboard:append { 'unnamedplus' }
 
 vim.api.nvim_create_autocmd('InsertLeave', {
   pattern = '*',
