@@ -34,3 +34,7 @@ o.wildoptions = 'pum'
 o.pumblend = 5
 o.background = 'dark'
 vim.opt.clipboard:append { 'unnamedplus' }
+o.foldcolumn = '1'
+o.foldlevel = 99
+o.foldlevelstart = 99
+o.foldenable = true

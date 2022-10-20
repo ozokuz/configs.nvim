@@ -19,10 +19,13 @@ M.normal = {
   ['<C-a>'] = 'gg<S-v>G',
   -- Hover Documentation
   ['K'] = function()
-    if vim.bo.filetype == 'help' then
-      vim.api.nvim_feedkeys('K', 'ni', true)
-    else
-      require('hover').hover()
+    local winid = require('ufo').peekFoldedLinesUnderCursor()
+    if not winid then
+      if vim.bo.filetype == 'help' then
+        vim.api.nvim_feedkeys('K', 'ni', true)
+      else
+        require('hover').hover()
+      end
     end
   end,
   ['gK'] = function()
@@ -30,6 +33,12 @@ M.normal = {
   end,
   ['öj'] = vim.diagnostic.goto_prev,
   ['ök'] = vim.diagnostic.goto_next,
+  ['zR'] = function()
+    require('ufo').openAllFolds()
+  end,
+  ['zM'] = function()
+    require('ufo').closeAllFolds()
+  end,
 }
 
 M.visual = {
@@ -149,6 +158,12 @@ M.leader = {
   ['tl'] = {
     a = '<cmd>TodoTrouble<CR>',
     d = '[T]odo: [L]ist',
+  },
+  ['v'] = {
+    a = function()
+      require('fold-preview').toggle_preview()
+    end,
+    d = 'Fold Preview',
   },
 }
 

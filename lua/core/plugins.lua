@@ -109,6 +109,10 @@ return {
   ['rcarriga/nvim-notify'] = {},
   ['MunifTanjim/nui.nvim'] = {},
   ['folke/noice.nvim'] = {},
+  -- Folding
+  ['kevinhwang91/promise-async'] = {},
+  ['kevinhwang91/nvim-ufo'] = {},
+  ['anuvyklack/fold-preview.nvim'] = {},
   -- Better Lists
   ['gaoDean/autolist.nvim'] = {},
   -- Markdown Preview

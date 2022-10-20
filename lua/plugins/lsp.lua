@@ -8,6 +8,10 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 capabilities.textDocument.colorProvider = {
   dynamicRegistration = true,
 }
+capabilities.textDocument.foldingRange = {
+  dynamicRegistration = true,
+  lineFoldingOnly = true,
+}
 
 -- Setup Formatting augroup
 local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
