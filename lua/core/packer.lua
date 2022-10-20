@@ -44,3 +44,5 @@ end
 if packer_bootstrap then
   require('packer').sync()
 end
+
+return packer_bootstrap

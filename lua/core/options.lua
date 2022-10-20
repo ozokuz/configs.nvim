@@ -6,8 +6,6 @@ vim.scriptencoding = 'utf-8'
 o.encoding = 'utf-8'
 o.fileencoding = 'utf-8'
 
-require 'core.shell'
-
 o.number = true
 o.relativenumber = true
 o.splitbelow = true
@@ -36,18 +34,3 @@ o.wildoptions = 'pum'
 o.pumblend = 5
 o.background = 'dark'
 vim.opt.clipboard:append { 'unnamedplus' }
-
-vim.api.nvim_create_autocmd('InsertLeave', {
-  pattern = '*',
-  command = 'set nopaste',
-})
-
-local highlight_group =
-  vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
-})
