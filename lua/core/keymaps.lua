@@ -165,6 +165,10 @@ M.leader = {
     end,
     d = 'Fold Preview',
   },
+  ['x'] = {
+    a = '<cmd>nohl<CR>',
+    d = 'Clear Search',
+  },
 }
 
 function M.smart_splits()
