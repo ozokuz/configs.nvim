@@ -18,7 +18,7 @@ require('nvim-tree').setup {
 }
 
 -- TODO: bugs out when opening plugin windows when only NvimTree is open
-vim.api.nvim_create_autocmd('BufEnter', {
+--[[ vim.api.nvim_create_autocmd('BufEnter', {
   group = vim.api.nvim_create_augroup('NvimTreeClose', { clear = true }),
   callback = function()
     local layout = vim.api.nvim_call_function('winlayout', {})
@@ -35,4 +35,4 @@ vim.api.nvim_create_autocmd('BufEnter', {
       vim.cmd 'confirm quit'
     end
   end,
-})
+}) ]]
