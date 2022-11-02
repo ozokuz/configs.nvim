@@ -26,9 +26,6 @@ local on_attach = function(client, bufnr)
     require('document-color').buf_attach(bufnr)
   end
 
-  -- Setup Document Outline Support
-  require('aerial').on_attach(client, bufnr)
-
   -- Setup Formatting Support
   if client.supports_method 'textDocument/formatting' then
     vim.api.nvim_clear_autocmds { group = augroup, buffer = bufnr }
