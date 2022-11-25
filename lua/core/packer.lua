@@ -5,6 +5,7 @@ local ensure_packer = function()
     .. '/site/pack/packer/start/packer.nvim'
   ---@diagnostic disable-next-line: missing-parameter
   if fn.empty(fn.glob(install_path)) > 0 then
+    vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#1e222a' })
     fn.system {
       'git',
       'clone',
