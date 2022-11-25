@@ -106,9 +106,9 @@ return {
   ['nvim-telescope/telescope-live-grep-args.nvim'] = {},
   ['nvim-telescope/telescope-github.nvim'] = {},
   -- Better Neovim UI
-  ['rcarriga/nvim-notify'] = {},
-  ['MunifTanjim/nui.nvim'] = {},
-  ['folke/noice.nvim'] = {},
+  -- ['rcarriga/nvim-notify'] = {},
+  -- ['MunifTanjim/nui.nvim'] = {},
+  -- ['folke/noice.nvim'] = {},
   -- Folding
   ['kevinhwang91/promise-async'] = {},
   ['kevinhwang91/nvim-ufo'] = {},
